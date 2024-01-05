@@ -23,3 +23,11 @@ console.log (typeof truth, truth);
 console.log (typeof car, car);
 console.log (typeof age, age);
 console.log (typeof person, person);
+
+let x = 10;
+let y = 3;
+
+console.log (x + y);
+console.log (y - x);
+console.log (x * y);
+console.log (x / y);
