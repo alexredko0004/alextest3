@@ -15,11 +15,8 @@ let carSize; //S, M, L, XL
 
 // gasStation ('S');
 
-function gasoline (fuel,carSize) {
-    if (fuel === undefined&&carSize === undefined) {
-        console.log ('Filling up the tank of XL car with diesel fuel type (default message)'); //Wanted to add some descriptive message here, but requirements are saying to have this output
-}
-    else if (fuel !== 'gas'&&fuel!=='diesel') {
+function gasoline (fuel='diesel',carSize='XL') {
+    if (fuel !== 'gas'&&fuel!=='diesel') {
         console.log ('Please provide a valid fuel type');
 }
     else if (carSize !== 'S'&&carSize!=='M'&&carSize!=='L'&&carSize!=='XL') {
@@ -40,3 +37,4 @@ gasoline ('diesel','L');
 gasoline ('diesel','XL');
 gasoline ();
 gasoline ('gas');
+gasoline ('L', 'gas'); //to check the validation message
