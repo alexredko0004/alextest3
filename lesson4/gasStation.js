@@ -26,7 +26,6 @@ else {console.log ('Filling up the tank of '+carSize+' car with '+fuel+' fuel ty
 }
 }
 
-
 gasoline ('gas','S');
 gasoline ('gas','M');
 gasoline ('gas','L');
@@ -37,4 +36,5 @@ gasoline ('diesel','L');
 gasoline ('diesel','XL');
 gasoline ();
 gasoline ('gas');
-gasoline ('L', 'gas'); //to check the validation message
+gasoline ('L', 'gas'); //to check the validation message for fuel type
+gasoline ('gas', 'gas'); //to check the validation message for car size
