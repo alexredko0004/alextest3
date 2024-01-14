@@ -1,6 +1,3 @@
-// let a = ['hello', 'test', 'sgdh'];
-// console.log (a.length===3)
-
 function longestPrefix (inputArray){
      function shortest (inputArray) {
         let shortest = 'hyhyghyghhuihkjhbsdfsdfdsfdsfdsfweerwerewrerwrwererwerweijh3434hj34h3';
