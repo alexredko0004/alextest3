@@ -4,12 +4,16 @@
   "description": "resolved",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test1": "node lesson3/function1.js"
+    "test1": "node lesson3/function1.js",
+    "test": "playwright test --config=playwright.config.js --headed --debug"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "playwright": "^1.40.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.41.0",
+    "@types/node": "^20.11.5"
   }
 }
