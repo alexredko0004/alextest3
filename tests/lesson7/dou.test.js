@@ -4,7 +4,9 @@ const { test, expect, chromium } = require('@playwright/test');
  //Test_1
  test('search articles', async ({ page }) => {
     await page.goto('https://dou.ua/');
-    await page.getByRole('link', { name: 'Стрічка' }).click();
+    await page.pause();
+    await page.locator('//header//li/a[contains(@href,"lenta")]').click()
+    //await page.getByRole('link', { name: 'Стрічка' }).click();
     await page.getByRole('combobox').selectOption('https://dou.ua/lenta/projects/');
     await expect(page.getByText('Спецпроєкти')).toBeInViewport;
     await expect(page.getByRole('combobox')).toContainText('Проєкти');
