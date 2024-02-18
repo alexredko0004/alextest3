@@ -8,7 +8,7 @@ test.describe('File download test', async()=>{
         await page.goto('https://the-internet.herokuapp.com/')
         await page.locator("//li/a[@href='/download']").click()  
         const downloadPromise = page.waitForEvent('download')
-        await page.locator("(//div/a[contains(@href,'.csv')])[2]").click()
+        await page.locator("(//div/a[contains(@href,'List of devices to test on.csv')])[1]").click()
         const download = await downloadPromise
         const path = `../../downld/${download.suggestedFilename()}`
         await download.saveAs(path)
