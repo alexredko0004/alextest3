@@ -4,6 +4,10 @@ import { positiveTestDataDiesel, negativeTestDataDiesel, negativeTestDataElectro
 import {BasePage} from './SingletonBasePage.js'
 
 positiveTestDataDiesel.forEach(({price,capacity,result},index)=>{
+  test.afterEach(async () => {
+    await BasePage.closePage()
+  })
+    
   test(`Testing positive diesel values${index}`, async () => {
       let newPage = new CustomsOnlineCalculator(await BasePage.getPage());
       await newPage.page.goto('https://auto.ria.com/uk/');
